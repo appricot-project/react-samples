@@ -4,28 +4,28 @@ import { type IGeneratedCreative, EGenerationMode } from "@/domains/generate/api
 export const mockGeneratedCreatives: IGeneratedCreative[] = [
   {
     id: "1",
-    imageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    imageUrl: "/data/1.jpeg",
     prompt: "Minimalist product shot",
     mode: EGenerationMode.NativeStory,
     createdAt: new Date().toISOString(),
   },
   {
     id: "2",
-    imageUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    imageUrl: "/data/2.jpeg",
     prompt: "Headphones lifestyle",
     mode: EGenerationMode.NativeStory,
     createdAt: new Date().toISOString(),
   },
   {
     id: "3",
-    imageUrl: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+    imageUrl: "/data/3.jpeg",
     prompt: "Sunglasses on yellow",
     mode: EGenerationMode.NativeStory,
     createdAt: new Date().toISOString(),
   },
   {
     id: "4",
-    imageUrl: "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&h=400&fit=crop",
+    imageUrl: "/data/4.jpeg",
     prompt: "Sneakers floating",
     mode: EGenerationMode.CompetitorBased,
     createdAt: new Date().toISOString(),
