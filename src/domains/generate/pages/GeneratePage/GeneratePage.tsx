@@ -74,13 +74,13 @@ export function GeneratePage() {
     <>
       <OnboardingWizard />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen  ">
         <Header />
 
         <div className="h-20" />
 
         <main className="max-w-6xl mx-auto px-6 py-8">
-          <div className="bg-card rounded-2xl border p-6 space-y-6">
+          <div className="bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-6 space-y-6 shadow-xl shadow-black/5">
             <div>
               <h2 className="text-sm font-medium mb-3">{t("mode")}</h2>
               <ModeSelector value={mode} onChange={setMode} />

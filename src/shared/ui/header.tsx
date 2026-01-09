@@ -58,15 +58,16 @@ export function Header({ title, subtitle }: HeaderProps) {
     <header
       ref={headerRef}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b transition-transform duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-transform duration-300",
+        "bg-background/40 dark:bg-background/30 backdrop-blur-2xl backdrop-saturate-150",
+        "border-b border-white/10 dark:border-white/5",
+        "shadow-[0_4px_30px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.2)]",
         !isVisible && "-translate-y-full"
       )}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
         <div>
-          <h1 className="text-xl font-semibold">
-            {title || t("title")}
-          </h1>
+          <h1 className="text-xl font-semibold">{title || t("title")}</h1>
           {subtitle !== undefined ? (
             subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>
           ) : (
@@ -90,10 +91,7 @@ export function Header({ title, subtitle }: HeaderProps) {
                 <DropdownMenuItem
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className={cn(
-                    "gap-2 cursor-pointer",
-                    i18n.language === lang.code && "bg-accent"
-                  )}
+                  className={cn("gap-2 cursor-pointer", i18n.language === lang.code && "bg-accent")}
                 >
                   <span>{lang.flag}</span>
                   <span>{lang.label}</span>
