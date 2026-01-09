@@ -21,7 +21,7 @@ export function AudienceStep() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto items-stretch">
         <SelectionTile
           title={t("audience.yesKnow")}
           description={t("audience.yesKnowDesc")}

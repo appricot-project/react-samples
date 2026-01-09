@@ -67,23 +67,23 @@ export function Header({ title, subtitle }: HeaderProps) {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
         <div>
-          <h1 className="text-xl font-semibold">{title || t("title")}</h1>
+          <h1 className="text-xl font-semibold truncate max-w-[150px] sm:max-w-none">{title || t("title")}</h1>
           {subtitle !== undefined ? (
-            subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>
+            subtitle && <p className="text-sm text-muted-foreground hidden md:block">{subtitle}</p>
           ) : (
-            <p className="text-sm text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-sm text-muted-foreground hidden md:block">{t("subtitle")}</p>
           )}
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="gap-2 cursor-pointer">
+              <Button variant="ghost" size="sm" className="gap-2 cursor-pointer px-2 sm:px-4">
                 <Globe className="w-4 h-4" />
                 <span className="hidden sm:inline">{currentLanguage.flag}</span>
-                <span className="text-sm">{currentLanguage.code.toUpperCase()}</span>
+                <span className="text-sm uppercase">{currentLanguage.code}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

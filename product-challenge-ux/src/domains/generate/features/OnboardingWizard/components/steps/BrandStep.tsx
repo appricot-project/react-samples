@@ -52,7 +52,7 @@ export function BrandStep() {
 
         <div className="space-y-3">
           <label className="text-sm font-medium">{t("brand.brandTone")}</label>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {brandTones.map((tone) => (
               <button
                 key={tone.id}
