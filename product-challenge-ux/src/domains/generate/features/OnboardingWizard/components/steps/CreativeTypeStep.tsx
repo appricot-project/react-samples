@@ -71,7 +71,7 @@ export function CreativeTypeStep() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
         {creativeTypes.map((type) => (
           <div key={type.id} className="relative h-full">
             {type.comingSoon && (

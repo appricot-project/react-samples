@@ -29,12 +29,12 @@ export function WizardButton() {
         {isCompleted ? (
           <>
             <Settings2 className="w-4 h-4" />
-            {t("editPreferences")}
+            <span className="hidden sm:inline">{t("editPreferences")}</span>
           </>
         ) : (
           <>
             <Sparkles className="w-4 h-4" />
-            {t("setupWizard")}
+            <span className={cn("hidden sm:inline", !isCompleted && "font-semibold")}>{t("setupWizard")}</span>
           </>
         )}
       </span>

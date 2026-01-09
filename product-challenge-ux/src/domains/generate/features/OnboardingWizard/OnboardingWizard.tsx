@@ -53,7 +53,7 @@ export function OnboardingWizard() {
       <DialogContent className="max-w-6xl w-[98vw] p-0 gap-0 overflow-hidden max-h-[95vh] flex flex-col" showCloseButton={false}>
         <DialogTitle className="sr-only">{t("quickSetup")}</DialogTitle>
         
-        <div className="flex items-center justify-between px-8 py-5 border-b shrink-0">
+        <div className="flex items-center justify-between px-4 sm:px-8 py-5 border-b shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-primary" />
@@ -73,11 +73,11 @@ export function OnboardingWizard() {
           </Button>
         </div>
 
-        <div className="px-8 pt-5 shrink-0">
+        <div className="px-4 sm:px-8 pt-5 shrink-0">
           <Progress value={progress} className="h-1.5" />
         </div>
 
-        <div className="px-8 py-5 shrink-0">
+        <div className="px-4 sm:px-8 py-5 shrink-0">
           <StepIndicator
             currentStep={currentStep}
             totalSteps={totalSteps}
@@ -85,11 +85,11 @@ export function OnboardingWizard() {
           />
         </div>
 
-        <div className="px-8 py-6 flex-1 overflow-y-auto">
+        <div className="px-4 sm:px-8 py-6 flex-1 overflow-y-auto">
           {CurrentStepComponent && <CurrentStepComponent />}
         </div>
 
-        <div className="flex items-center justify-between px-8 py-5 border-t bg-muted/30 shrink-0">
+        <div className="flex items-center justify-between px-4 sm:px-8 py-5 border-t bg-muted/30 shrink-0">
           <div>
             {!isCompleted && (
               <Button
