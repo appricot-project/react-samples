@@ -32,7 +32,7 @@ function CreativeCard({
   return (
     <div
       onClick={onClick}
-      className="group relative rounded-xl overflow-hidden bg-muted aspect-square cursor-pointer"
+      className="group relative rounded-xl overflow-hidden bg-muted/50 backdrop-blur-sm border border-border/30 aspect-square cursor-pointer shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-shadow"
     >
       <img
         src={creative.imageUrl}
@@ -85,7 +85,7 @@ function LoadingCard() {
   const { t } = useTranslation("generate");
 
   return (
-    <div className="rounded-xl bg-muted aspect-square animate-pulse flex items-center justify-center">
+<div className="rounded-xl bg-muted/50 backdrop-blur-sm border border-border/30 aspect-square animate-pulse flex items-center justify-center">
       <div className="text-center">
         <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-2" />
         <p className="text-xs text-muted-foreground">{t("generating")}</p>
@@ -109,8 +109,7 @@ export function ResultsGrid({ creatives, isLoading, onUseAsReference }: ResultsG
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {isLoading &&
-          Array.from({ length: 4 }).map((_, i) => <LoadingCard key={`loading-${i}`} />)}
+        {isLoading && Array.from({ length: 4 }).map((_, i) => <LoadingCard key={`loading-${i}`} />)}
         {creatives.map((creative) => (
           <CreativeCard
             key={creative.id}
